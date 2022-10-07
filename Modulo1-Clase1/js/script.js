@@ -134,19 +134,19 @@ const message = "JavaScript is awesome!";
 
 //Recuperación de datos
 //confirm() - Muestra una ventana modal con un mensaje y dos botones, Ok y Cancel. Si hace clic en Ok, el resultado será true, si hace clic en Cancel - Regresará false.
-const isMajorAge = confirm("Eres mayor de edad");
-alert(isMajorAge);
+//const isMajorAge = confirm("Eres mayor de edad");
+//alert(isMajorAge);
 
 //prompt() - Muestra una ventana modal con un campo de entrada y botones Ok y Cancel. Si se pulsa Ok, el resultado será el que el usuario haya introducido, si se pulsa Cancel- regresará null.
-const whatIsYourAge = prompt("Cual es tu edad?");
-alert("Tu edad es: " + whatIsYourAge);
+//const whatIsYourAge = prompt("Cual es tu edad?");
+//alert("Tu edad es: " + whatIsYourAge);
 
 //Pide al usuario que ingrese el lado de un cuadrado y calcula su area
-let squareL = prompt("Cual es el la longitud del cuadro a calcular");
+//let squareL = prompt("Cual es el la longitud del cuadro a calcular");
 
-let squareArea = squareL * squareL;
+//let squareArea = squareL * squareL;
 
-alert("El área del cuadrado es: " + squareArea);
+//alert("El área del cuadrado es: " + squareArea);
 
 //Calcula el area de rectagunlo
 //Calcula el area de triangulo
@@ -177,6 +177,15 @@ let value = 5;
 // Entradas similares value = value + 10;
 value += 10;
 console.log(value); // 15
+
+let valueSum1 = 1;
+let res = valueSum1 + valueSum1;
+
+console.log(res);
+
+
+
+
 
 
 
