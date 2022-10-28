@@ -13,15 +13,32 @@ Las funciones de flecha también ignoran la presencia de un modo estricto.
   de si el script se está ejecutando en modo estricto o no.
 */
 
-const showThis = () => {
+function showName(){
+  console.log(this.username);
+}
+
+const showThis = (object) => {
+  console.log(object);
   console.log("this in showThis: ", this);
 };
 
-showThis(); // this in showThis: window
+//showThis(); // this in showThis: window
 
 const user = {
   username: "Mango",
 };
+
+const fruit = {
+  username: "Apple",
+};
+
+showThis(user);
+showThis(fruit);
+
+user.showName = showName;
+
+user.showName();
+
 user.showContext = showThis;
 
 user.showContext(); // this in showThis: window
@@ -49,6 +66,9 @@ Este ejemplo no es práctico, pero muestra bien cómo funciona el contexto
   },
 };
 
+
 hotel.showThis();
+
+
 // this in foo: {username: 'Resort hotel', showThis: ƒ}
 // this in showThis: {username: 'Resort hotel',showThis: ƒ}
