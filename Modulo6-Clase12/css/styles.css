@@ -2,6 +2,11 @@ body{
 	margin: 24px;
 }
 
-.is-hidder{
+.is-hidden{
 	display: none;
+}
+
+.dark-mode{
+	background: black;
+	color: white;
 }
