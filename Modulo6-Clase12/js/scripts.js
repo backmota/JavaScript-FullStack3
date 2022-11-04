@@ -103,13 +103,21 @@ console.log(image.getAttribute("alt"));
 console.log(image.getAttribute("href"));
 
 image.setAttribute("alt", "Javascript is Amazing");
-console.log(image.getAttribute("alt"));
-image.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png");
+//console.log(image.getAttribute("alt"));
+//image.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png");
 
 //image.setAttribute("alt", "Tux, mascota de Linux");
 //console.log(image.getAttribute("alt"));
 
 //Data Set - data-atributos
+//https://developer.mozilla.org/es/docs/Learn/HTML/Howto/Use_data_attributes
+
+/*
+Permite añadir un atributo arbitrario a un tag y recuperar su valor en JavaScript. Esta función se utiliza para simplificar la escritura de código, por ejemplo, vinculando datos y marcas mediante un identificador único, especificando el tipo de acción de un botón, etc.*/
+
+
+
+
 
 
 
