@@ -170,6 +170,46 @@ https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Errors/Missing_cu
 */
 
 
+const listNames = document.querySelector(".usernames");
+const lastItem = document.createElement("li");
+lastItem.textContent = "Poly";
+console.log(lastItem); 
+listNames.append(lastItem);
+
+// Adds an item to the beginning of the list
+const firstItem = document.createElement("li");
+firstItem.textContent = "Ajax";
+
+listNames.prepend(firstItem);
+
+listNames.prepend(heading);
+listNames.append(newImage);
+
+
+// Adds a title before the list
+const newTitle = document.createElement("h2");
+newTitle.textContent = "USERNAMES";
+listNames.before(newTitle);
+
+const newText = document.createElement("p");
+newText.textContent =  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error iure voluptate numquam maiores nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error iure voluptate numquam maiores nisi!";
+listNames.after(newText)
+
+//Remove
+//https://developer.mozilla.org/es/docs/Web/API/Node/removeChild
+const deleteText = document.querySelector(".article-text");
+deleteText.remove();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
