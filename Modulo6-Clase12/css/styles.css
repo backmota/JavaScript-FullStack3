@@ -10,3 +10,8 @@ body{
 	background: black;
 	color: white;
 }
+
+.article-title{
+	font-size: 35px;
+	background-color: yellow;
+}

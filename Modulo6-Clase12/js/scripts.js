@@ -59,6 +59,18 @@ const body = document.querySelector(".body");
 body.classList.replace("body","dark-mode");
 body.classList.replace("dark-mode","body");
 
+//Propiedad style
+/*
+Se utiliza para leer y modificar los estilos en línea. 
+Devuelve un objeto CSSStyleDeclaration que contiene una lista de todas las propiedades
+ definidas en los estilos en línea del elemento solamente, no todo el CSS. 
+ Cuando se escriben, las propiedades se escriben en camelCase, es decir, 
+ background-color se convierte en element.style.backgroundColor, etc.
+*/
+//const title = document.querySelector(".article-title");
+
+title.style.backgroundColor = "teal";
+title.style.fontSize = "24px";
 
 
 
