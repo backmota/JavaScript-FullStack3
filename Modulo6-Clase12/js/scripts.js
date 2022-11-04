@@ -72,6 +72,48 @@ Devuelve un objeto CSSStyleDeclaration que contiene una lista de todas las propi
 title.style.backgroundColor = "teal";
 title.style.fontSize = "24px";
 
+//Atributos
+
+/*
+https://developer.mozilla.org/es/docs/Web/API/Element/hasAttribute
+https://developer.mozilla.org/es/docs/Web/API/Element/getAttribute
+https://developer.mozilla.org/es/docs/Web/API/Element/setAttribute
+https://developer.mozilla.org/es/docs/Web/API/Element/removeAttribute
+https://developer.mozilla.org/es/docs/Web/API/Element/attributes
+
+
+Los elementos del DOM corresponden a los tags HTML que tienen atributos de texto. El acceso a los atributos se realiza mediante métodos estándar. Estos métodos funcionan con el valor, que se encuentra en el HTML.
+
+elem.hasAttribute(name) - Comprueba el atributo, devuelve true o false.
+elem.getAttribute(name) - Obtiene el valor del atributo y lo devuelve
+elem.setAttribute(name, value) - Establece el atributo.
+elem.removeAttribute(name) - Elimina el atributo.
+elem.attributes - propiedad, devuelve el objeto de todos los atributos del elemento.
+*/
+
+const image = document.querySelector(".image");
+
+console.log(image.attributes);
+
+console.log(image.hasAttribute("src"));
+console.log(image.hasAttribute("href"));
+
+console.log(image.getAttribute("src"));
+console.log(image.getAttribute("alt"));
+console.log(image.getAttribute("href"));
+
+image.setAttribute("alt", "Javascript is Amazing");
+console.log(image.getAttribute("alt"));
+image.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png");
+
+//image.setAttribute("alt", "Tux, mascota de Linux");
+//console.log(image.getAttribute("alt"));
+
+//Data Set - data-atributos
+
+
+
+
 
 
 
