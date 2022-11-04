@@ -128,7 +128,61 @@ console.log(dishes);
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 dishes.forEach((dish) => {
 	console.log(dish.dataset.id);
-})
+});
+
+
+//Creación y eliminación de elementos
+/*
+La API del DOM no sólo permite seleccionar o modificar los elementos existentes, sino también eliminar y crear nuevos elementos para luego añadirlos al documento.
+
+https://developer.mozilla.org/es/docs/Web/API/Document/createElement
+
+document.createElement(tagName);
+*/
+
+const heading = document.createElement("h1");
+console.log(heading);
+
+heading.textContent = "Este es un titulo";
+
+console.log(heading);
+
+const newImage = document.createElement("img");
+newImage.src = "https://placeimg.com/640/480/nature";
+newImage.alt = "Nature";
+
+console.log(newImage);
+
+//Anexo de información 
+
+/*
+Para que el elemento creado se muestre en la página, debe añadirse a un elemento existente en el árbol DOM. Digamos que añadimos a algún elemento elemento, existen métodos para ello.
+
+element.append(el1, el2, ...) - Añade uno o más elementos después de todos los hijos del elemento.
+element.prepend(el1, el2, ...) - Añade uno o más elementos antes de todos los hijos del elemento elemento.
+element.after(el1, el2, ...) - Añade uno o más elementos después del elemento element.
+element.before(el1, el2, ...) - Añade uno o más elementos antes del elemento element.
+En todos estos métodos, el son elementos o cadenas, en cualquier combinación y cantidad. Las cadenas se añaden como nodos de texto.
+
+
+https://developer.mozilla.org/es/docs/Web/API/Node/appendChild
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
