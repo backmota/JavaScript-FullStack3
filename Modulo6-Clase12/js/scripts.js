@@ -115,7 +115,20 @@ image.setAttribute("alt", "Javascript is Amazing");
 /*
 Permite añadir un atributo arbitrario a un tag y recuperar su valor en JavaScript. Esta función se utiliza para simplificar la escritura de código, por ejemplo, vinculando datos y marcas mediante un identificador único, especificando el tipo de acción de un botón, etc.*/
 
+const saveBtn = document.querySelector('.editor button[data-action="save"]');
+console.log(saveBtn);
+console.log(saveBtn.dataset.action);
 
+const closeBtn = document.querySelector('.editor button[data-action="close"]');
+console.log(closeBtn);
+console.log(closeBtn.dataset.action);
+
+const dishes = document.querySelectorAll(".dishes > li");
+console.log(dishes);
+//https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+dishes.forEach((dish) => {
+	console.log(dish.dataset.id);
+})
 
 
 
