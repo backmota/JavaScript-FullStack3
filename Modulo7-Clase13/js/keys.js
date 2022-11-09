@@ -2,7 +2,20 @@ const clearLogBtn = document.querySelector('[data-action="clear"]');
 const logList = document.querySelector(".log-list");
 let keypressCounter = 1;
 
-document.addEventListener("keydown", logMessage);
+document.addEventListener("keydown", event => {
+	event.preventDefault();
+
+	if ((event.ctrlKey || event.metaKey) && event.code === "KeyS") {
+	    console.log("«Ctrl + s» or «Command + s» combo");
+	  }
+
+	if ((event.ctrlKey || event.metaKey) && event.code === "KeyI") {
+	    console.log("ctrl I");
+	  }  
+
+});
+	
+
 document.addEventListener("keyup", logMessage);
 clearLogBtn.addEventListener("click", reset);
 
