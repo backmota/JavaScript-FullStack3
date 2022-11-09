@@ -7,3 +7,17 @@ body {
   padding: 1rem;
   text-align: center;
 }
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form input {
+  margin-bottom: 16px;
+  padding: 8px 12px;
+}
+
+.register-form button {
+  padding: 12px;
+}
