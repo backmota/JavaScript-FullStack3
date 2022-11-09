@@ -18,7 +18,7 @@ removeListenerBtn.addEventListener("click", () => {
 	console.log("click event listener was removed from btn");
 });
 
-
+const select = document.querySelector(".pizza-select");
 
 
 
