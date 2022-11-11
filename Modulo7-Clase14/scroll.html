@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script async src="js/scroll.js"></script>
+	<script async src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<link rel="stylesheet" type="text/css" href="css/scroll.css">
 	<title>Throttle y Debounce</title>
 </head>
@@ -12,8 +13,13 @@
 
 	<div class="event-counter">
 	  <div class="box">
-	    <p>Number of scroll events</p>
-	    <span class="output">0</span>
+	    <p>No timing function</p>
+	    <span class="output vanilla">0</span>
+	  </div>
+
+	  <div class="box">
+	    <p>Throttled</p>
+	    <span class="output throttled">0</span>
 	  </div>
 	</div>
 </body>
