@@ -11,3 +11,9 @@ Vamos a enumerar los principales comandos de inmediato y los utilizaremos de for
 - npm run [custom-script] - Ejecuta el script personalizado ubicado en el package paquete.json`.
 - npm outdated - se utiliza para buscar actualizaciones, detectar compatibles versiones mediante programación y mostrar la lista de actualizaciones disponibles.
 - npm update - Actualiza todos los paquetes a la versión máxima permitida.
+
+### Inicialización del proyecto
+
+Cada proyecto comienza con la creación de un archivo package.json, mantiene un seguimiento de las dependencias, contiene información de servicio, permite escribir scripts npm y sirve como una instrucción para crear un nuevo proyecto basado en la configuración ya preparada. El archivo package.json puede ser creado con el comando npm init, inicializando así el proyecto en la carpeta actual.
+
+```npm init --yes```
