@@ -29,7 +29,7 @@ document.addEventListener(
   _.debounce(() => {
     eventCounter.debounced += 1;
     debouncedOutput.textContent = eventCounter.debounced;
-  }, 1000)
+  }, 300)
 );
 
 //Leading debounce
