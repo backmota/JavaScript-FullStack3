@@ -51,6 +51,64 @@ localStorage.removeItem("ui-theme");
 //https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear
 //localStorage.clear();
 
+const form = document.querySelector("#message-form");
+const output = document.querySelector("#output");
+const LocalStorage_Key = "Esto es un ejemplo de GoIt";
+const message = "Mensaje"
+const history = [];
+
+updateOutputDefault();
+form.addEventListener("submit", saveMessage);
+
+function saveMessage(evt){
+	evt.preventDefault();
+	localStorage.setItem(message,form.elements.message.value);
+	updateOutput();
+	form.reset();
+}
+
+function updateOutput(){
+	console.log("update");
+	output.textContent = localStorage.getItem(message) || "";
+	history.push(localStorage.getItem(message));
+	console.log(history);
+}
+
+function updateOutputDefault(){
+	output.textContent = LocalStorage_Key;
+}
+
+const save = (key, value) => {
+  try {
+    const serializedState = JSON.stringify(value);
+    localStorage.setItem(key, serializedState);
+  } catch (error) {
+    console.error("Set state error: ", error.message);
+  }
+};
+
+const load = key => {
+  try {
+    const serializedState = localStorage.getItem(key);
+    return serializedState === null ? undefined : JSON.parse(serializedState);
+  } catch (error) {
+    console.error("Get state error: ", error.message);
+  }
+};
+
+const timesZones = {
+	MXN: "UTC-6",
+	Country1: "UTC-6",
+	Country2: "UTC-5",
+	Country3: "UTC-4",
+	Country4: "UTC-3",
+}
+
+save("zone_time","UTC-6");
+
+save("Zonas Horarias", timesZones);
+
+console.log(load("Zonas Horarias"));
 
 
 
