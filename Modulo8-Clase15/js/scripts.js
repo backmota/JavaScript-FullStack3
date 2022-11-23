@@ -17,9 +17,11 @@ const eventCounter = {
 document.addEventListener("scroll", () => {
 	eventCounter.vanilla += 1;
 	vanillaOutput.textContent = eventCounter.vanilla;
+	console.log("scroll");
 });
 
 document.addEventListener("scroll", _.throttle(() => {
+	console.log("throttle");
 	eventCounter.throttled += 1;
 	throttledOutput.textContent = eventCounter.throttled;
 	} ,300));
@@ -27,6 +29,7 @@ document.addEventListener("scroll", _.throttle(() => {
 document.addEventListener(
   "scroll",
   _.debounce(() => {
+  	console.log("debounce");
     eventCounter.debounced += 1;
     debouncedOutput.textContent = eventCounter.debounced;
   }, 300)
@@ -39,6 +42,7 @@ document.addEventListener(
 	"scroll",
 	_.debounce(
 		() => {
+			console.log("Lazy debounce");
 			eventCounter.leading += 1;
 			leadingOutput.textContent = eventCounter.leading;
 		}
