@@ -1,0 +1,35 @@
+body {
+  margin: 16px;
+  line-height: 1.5;
+  color: #212121;
+  font-family: sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.posts {
+  margin: 0;
+  list-style: none;
+  padding: 24px;
+}
+
+.posts li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.post-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.post-title:first-letter {
+  text-transform: uppercase;
+}
+
+.post-body {
+  margin: 0;
+}

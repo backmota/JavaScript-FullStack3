@@ -28,6 +28,8 @@ Vamos a hacer consultas JSONPlaceholder API - público API REST para la creació
 
 */
 
+const url = "https://jsonplaceholder.typicode.com/users?_limit=7&_sort=name"
+
 const fetchUsersBtn = document.querySelector(".btn");
 const userList = document.querySelector(".user-list");
 
@@ -38,29 +40,25 @@ fetchUsersBtn.addEventListener("click", () => {
 });
 
 function fetchUsers() {
-	//fetch("localhost:1337/users")
-  return fetch("http://jsonplaceholder.typicode.com/users").then(
-    (response) => {
-      if (!response.ok) {
-        throw new Error(response.status);
-      }
-      return response.json();
+  return fetch(url).then((response) => {
+    if (!response.ok) {
+      throw new Error(response.status);
     }
-  );
+    return response.json();
+  });
 }
 
 function renderUserList(users) {
   const markup = users
     .map((user) => {
-      return `<li>
-          <p><b>Name</b>: ${user.name}</p>
-          <p><b>Email</b>: ${user.email}</p>
-          <p><b>Company</b>: ${user.company.name}</p>
-        </li>`;
+      return `
+          <li>
+            <p><b>Name</b>: ${user.name}</p>
+            <p><b>Email</b>: ${user.email}</p>
+            <p><b>Company</b>: ${user.company.name}</p>
+          </li>
+      `;
     })
     .join("");
   userList.innerHTML = markup;
 }
-
-
-
