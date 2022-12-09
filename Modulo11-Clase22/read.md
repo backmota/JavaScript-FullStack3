@@ -66,6 +66,16 @@ Creamos la ruta post
    },
 ```
 
+### Levantamos el servidor
+
+Utilizando el comando 
+
+```
+sails lift
+```
+
+El proyecto se encuentra en la ruta http://localhost:1337/
+
 
 
 
